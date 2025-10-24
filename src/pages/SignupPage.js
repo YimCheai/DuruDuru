@@ -1,4 +1,4 @@
-import './StartPage.css';
+import './style.css';
 import React from 'react';
 
 function SignupPage() {

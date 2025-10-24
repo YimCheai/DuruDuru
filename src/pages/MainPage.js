@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './App.css'; // 스타일을 위한 CSS 파일을 임포트합니다.
+import './style.css'; // 스타일을 위한 CSS 파일을 임포트합니다.
+
 
 // ----- 데이터 -----
 // 요청하신 대로 편지 제목을 배열로 관리합니다.

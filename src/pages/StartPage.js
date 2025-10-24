@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from "../images/logoImage.svg";
 import googleLogo from "../images/google.svg";
-import './StartPage.css';
+import './style.css';
 
 function StartPage(){
     return (
