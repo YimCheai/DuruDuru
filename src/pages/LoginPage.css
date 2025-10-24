@@ -10,14 +10,15 @@
 }
 
 .input-wrapper input {
-    background-color: #e2e2e2;      
+    background-color: white;      
     width: 100%;
     max-width: 400px;                
     padding: 12px 45px 12px 15px;     
     border: none;
     border-radius: 35px;          
     font-size: 16px;                  
-    box-sizing: border-box;          
+    box-sizing: border-box;   
+    font-family: 'IsYun';       
 }
 .input-wrapper .icon {
   position: absolute;
@@ -28,25 +29,36 @@
   height: 24px;
 }
 
-.titleBox{
+
+.titleBox1{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-bottom: 10%;
 }
+.buttonBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  gap: 10px;
 
-.logIn-button{
+}
+
+.logIn-button1{
   width: 100%;
   max-width: 400px;
   padding: 12px;
   border: none;
   border-radius: 35px;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
   margin-bottom: 45%;
+  font-family: 'IsYun';
 }
-.logIn-button {
+.logIn-button1 {
   background-color: #5B6CAA;
   color: white;
 }

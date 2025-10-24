@@ -13,7 +13,7 @@ function StartPage(){
         </p>
       </div>
 
-      <div className='buttonBox'>
+      <div className='buttonBox1'>
         <button className="logIn-button">로그인</button>
         <button className="google-button">
           <img src={googleLogo} className="googleLogo" />
