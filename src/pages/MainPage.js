@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './style.css'; // 스타일을 위한 CSS 파일을 임포트합니다.
+import './css/MainPage.css'; // 스타일을 위한 CSS 파일을 임포트합니다.
 
 function Main() {
   // 1. 편지(고민) 데이터를 state로 관리
