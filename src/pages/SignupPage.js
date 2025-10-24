@@ -1,10 +1,9 @@
-import './SignupPage.css';
+import './StartPage.css';
 import React from 'react';
 
 function SignupPage() {
   return (
     <div className='Elements'>
-      <img src="/images/logoImage.svg" alt="로고" className="logo" />
       
       <p className="welcome-text">
         두루두루에 오신것을 환영합니다!
@@ -16,7 +15,7 @@ function SignupPage() {
         <input type="password" placeholder="비밀번호 확인"/>
       </div>
 
-      <button className="signup-button">회원가입</button>
+      <button className="signup-button">회원가입!!!!!!!!</button>
 
       <button className="google-button">
         구글 계정으로 가입

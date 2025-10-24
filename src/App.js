@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         {/* 앱 시작 시 보여지는 페이지 */}
-        {/* <Route path="/" element={<IntroPage />} /> */}
+        <Route path="/" element={<IntroPage />} />
         <Route path="/start" element={<StartPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<Loginpage />} />
