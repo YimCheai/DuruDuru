@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import './css/MainPage.css'; // 스타일을 위한 CSS 파일을 임포트합니다.
+// CSS 경로는 실제 위치에 맞게 '../css/MainPage.css' 또는 './css/MainPage.css'로 설정하세요.
+import './css/MainPage.css';
+// SVG 이미지를 import할 필요 없습니다 (CSS 배경으로 처리)
+// import letterIcon from '../images/Letter_icon.svg'; 
 
 function Main() {
-  // 1. 편지(고민) 데이터를 state로 관리
   const [worries, setWorries] = useState([
     { id: 1, text: '가장 친한 친구랑 다퉜을 때 넌 어떻게 해?' },
     { id: 2, text: '부모님께 심한 말을 해버렸어... 어떡해??' },
@@ -10,24 +12,27 @@ function Main() {
   ]);
 
   return (
-    // 2. 전체 배경은 container에 적용 (style.css에서)
     <div className="container">
       
-      {/* 3. 요청하신 '제목' */}
-      <h1 className="title">오늘의 고민들 💌</h1>
+      <div className="header">
+        <h1 className="title">오늘의 고민들</h1>
+        {/* 편지 아이콘은 필요하면 남기시고, 아니면 이 img 태그를 지우세요 */}
+        {/* <img src={letterIcon} alt="편지 아이콘" className="title-icon" /> */}
+      </div>
 
-      {/* 4. 편지 목록 (worry-list) */}
       <main className="worry-list">
         {worries.map((worry) => (
           // 5. 편지 카드 (CSS로 배경 이미지 적용)
           <div key={worry.id} className="letter-card">
+            {/* 배열의 text가 편지지 위에 표시됩니다. 
+              CSS에서 .letter-card에 편지지 이미지를 배경으로 넣으면 됩니다.
+            */}
             <p className="worry-text">{worry.text}</p>
-            <span className="to-you">to. you</span>
+            
+            {/* "to. you" span 태그 삭제됨 */}
           </div>
         ))}
       </main>
-
-      {/* (하단 네비게이션 바 등 전부 제외) */}
       
     </div>
   );
