@@ -23,24 +23,30 @@ body {
 
 /* 3. 헤더 (Main.js의 <div className="header">) */
 .header {
-  /* ★ 화면 상단에 고정 */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  /* ... (position, top, left, right, z-index 등은 동일) ... */
   
-  /* 헤더의 높이는 내부 패딩에 따름 */
+  padding: 140px 0 0 0; 
+  
   display: flex;
-  align-items: center;
-  padding: 25px 20px 15px 30px;
-  z-index: 10; /* 스크롤 영역보다 위에 있도록 설정 */
+  align-items: center; 
+  justify-content: center; 
+  
+  /* ★ 1. 글자와 아이콘 사이에 간격 추가 (예: 8px) */
+  gap: 8px; 
 }
 
 .title {
-  font-size: 20px;
-  font-weight: 700;
+  /* ... (폰트 스타일 동일) ... */
+  font-family: 'IsYun', serif;
+  font-size: 32px;
+  font-weight: 400;
   margin: 0;
-  color: #333;
+  color: #5A6CAA;
+}
+
+.title-icon {
+  width: 30px; /* 아이콘 크기는 원하는 대로 조절하세요 */
+  height: 30px;
 }
 
 .worry-list {

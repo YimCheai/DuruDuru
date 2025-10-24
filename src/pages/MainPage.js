@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './css/MainPage.css';
 import BottomBar  from '../component/BottomBar.jsx'
+import letterIcon from '../images/Letter_icon.svg';
 function Main() {
   const [worries, setWorries] = useState([
     { id: 1, text: '가장 친한 친구랑 다퉜을 때 넌 어떻게 해?' },
@@ -16,8 +17,7 @@ function Main() {
 
       <div className="header">
         <h1 className="title">오늘의 고민들</h1>
-        {/* 편지 아이콘은 필요하면 남기시고, 아니면 이 img 태그를 지우세요 */}
-        {/* <img src={letterIcon} alt="편지 아이콘" className="title-icon" /> */}
+        <img src={letterIcon} alt="편지 아이콘" className="title-icon" />
       </div>
 
       <main className="worry-list">

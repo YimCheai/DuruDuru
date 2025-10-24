@@ -19,6 +19,7 @@ function App() {
         <Route path="/write" element={<WritePage />} /> {/* WritePage 경로 추가 */}
         <Route path="/main" element={<MainPage />} /> 
         <Route path="/profile" element={<ProfilePage />} /> 
+        <Route path="/MainPage" element={<MainPage />} /> 
       </Routes>
     </Router>
   );
