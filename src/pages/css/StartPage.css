@@ -1,0 +1,76 @@
+
+ .Elements {
+    display: flex;       
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+    padding: 20px;
+    background-image: url('../../images/background.svg');
+    background-size: cover;
+    background-position: center;
+    
+  }
+
+.titleBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 75%;
+}
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.welcome-text {
+  font-size: 21px;
+  color: #333;
+  font-family: 'IsYun';
+}
+
+.buttonBox1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  gap: 10px;
+
+}
+.logIn-button,
+.google-button {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border: none;
+  border-radius: 35px;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'IsYun';
+}
+.google-button{
+  gap: 3%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.google-button:hover{
+  border: solid 1px black;
+}
+.logIn-button {
+  background-color: #5B6CAA;
+  color: white;
+}
+
+.google-button {
+  background-color: white;
+  border: 1px solid #ddd;
+  color: #333;
+}
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
