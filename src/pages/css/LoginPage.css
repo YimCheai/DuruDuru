@@ -1,0 +1,70 @@
+
+.inputBox{
+   width: 100%;
+   margin-bottom: 8%;
+}
+.input-wrapper {
+    position: relative; 
+    width: 80%;
+    margin-left: 7%;
+    padding: 2%;
+}
+
+.input-wrapper input {
+    background-color: white;      
+    width: 100%;
+    max-width: 400px;                
+    padding: 12px 45px 12px 15px;     
+    border: none;
+    border-radius: 35px;          
+    font-size: 16px;                  
+    box-sizing: border-box;   
+    font-family: 'IsYun';       
+}
+.input-wrapper .icon {
+  position: absolute;
+  right: 20px;     
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+
+
+.titleBox1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+.buttonBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  gap: 10px;
+
+}
+
+.logIn-button1{
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border: none;
+  border-radius: 35px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 45%;
+  font-family: 'IsYun';
+}
+.logIn-button1 {
+  background-color: #5B6CAA;
+  color: white;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
