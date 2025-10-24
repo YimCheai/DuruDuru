@@ -14,7 +14,7 @@ function App() {
         <Route path="/start" element={<StartPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<Loginpage />} />
-        <Route path="/write" element={<WritePage />} />
+        <Route path="/write" element={<WritePage />} /> {/* WritePage 경로 추가 */}
       </Routes>
     </Router>
   );

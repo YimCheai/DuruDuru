@@ -1,19 +1,20 @@
 import React from 'react';
-import bg from '../images/background2.svg'; // src/pages 기준으로 상위(src) → images
+import bg from '../images/background2.svg';
 
 export default function WritePage() {
   return (
     <div
       style={{
-        height: '100vh',
-        width: '100%',
+        height: '852px',      // 이미지 원본 세로
+        width: '393px',       // 이미지 원본 가로
         backgroundImage: `url(${bg})`,
-        backgroundSize: 'cover',
+        backgroundSize: '393px 852px', // 고정 크기
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
+        backgroundPosition: 'top left', // 좌측 상단 기준
+        margin: '0 auto', // 가운데 정렬 (선택 사항)
       }}
     >
-      {/* 나중에 입력창, 버튼 추가 가능 */}
+      {/* 입력창, 버튼 등 추가 가능 */}
     </div>
   );
 }
