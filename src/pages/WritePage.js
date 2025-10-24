@@ -1,9 +1,12 @@
 import React from 'react';
 
-export default function WritePage() {
+function Write() {
+
   return (
-    <div className='container'>
-      
+    <div className="container">
+
     </div>
   );
 }
+
+export default Write;
