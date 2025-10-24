@@ -6,68 +6,59 @@ body {
     sans-serif;
 }
 
+/* 2. 메인 컨테이너 (레이아웃 기준점) */
 .container {
   background-color: #faf8f3; 
   background-size: cover;
-  
-  /* 화면 전체 높이를 차지하도록 설정 */
   height: 100vh; 
-  
-  /* ★ 자식 요소들의 절대 위치 기준점으로 설정 */
   position: relative; 
-
-  /* ★ flex 속성 제거 */
-  /* display: flex; */
-  /* flex-direction: column; */
 }
 
-/* 3. 헤더 (Main.js의 <div className="header">) */
+/* 3. 헤더 (오늘의 고민들) */
 .header {
-  /* ... (position, top, left, right, z-index 등은 동일) ... */
+  /* 화면 상단에 고정 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; /* 스크롤 영역보다 위에 있도록 설정 */
   
+  /* Y위치 (세로) */
   padding: 140px 0 0 0; 
   
+  /* 자식요소(제목+아이콘) 정렬 */
   display: flex;
   align-items: center; 
-  justify-content: center; 
-  
-  /* ★ 1. 글자와 아이콘 사이에 간격 추가 (예: 8px) */
-  gap: 8px; 
+  justify-content: center; /* 가로 중앙 정렬 */
+  gap: 8px; /* 글자와 아이콘 사이 간격 */
 }
 
 .title {
-  /* ... (폰트 스타일 동일) ... */
-  font-family: 'IsYun', serif;
+  font-family: 'IsYun', serif; /* index.css에 등록한 폰트 */
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 400; /* Regular */
   margin: 0;
   color: #5A6CAA;
 }
 
 .title-icon {
-  width: 30px; /* 아이콘 크기는 원하는 대로 조절하세요 */
+  width: 30px; 
   height: 30px;
 }
 
+/* 4. 스크롤 영역 (편지 목록) */
 .worry-list {
-  /* ★ flex-grow 제거 */
-  /* flex-grow: 1; */ 
-
-  /* ★★★
-    요청하신 대로 절대 위치로 스크롤 영역 지정
-  ★★★ */
+  /* 절대 위치로 스크롤 영역 지정 */
   position: absolute;
-  top: 200px;     /* 화면 위에서 300px 떨어진 곳에서 시작 */
-  bottom: 130px;  /* 화면 아래에서 400px 떨어진 곳에서 끝 */
-  
-  /* 가로 꽉 채우기 */
+  top: 200px; 
+  bottom: 130px;
   left: 0;
   right: 0;
   
-  /* ★ 이 영역 안에서만 스크롤 */
+  /* 이 영역 안에서만 스크롤 */
   overflow-y: auto; 
   
-  /* (이하는 기존과 동일: 편지 정렬) */
+  /* 편지 정렬 */
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -78,11 +69,9 @@ body {
 
 /* 5. 편지 카드 (공통 스타일) */
 .letter-card {
-  /* ★ 요청하신 고정 크기 */
+  /* 고정 크기 */
   width: 275.89px; 
   height: 160px; 
-
-  /* ★ 스크롤 영역에서 찌그러지지 않도록 크기 고정 */
   flex-shrink: 0; 
   
   /* 배경 이미지 공통 설정 */
@@ -92,14 +81,16 @@ body {
   /* 텍스트 배치 */
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center;
+  
+  /* ★ 텍스트를 위쪽(flex-start)에 정렬 */
+  justify-content: flex-start; 
+  
+  align-items: center; /* 가로 중앙 정렬 */
   padding: 30px; 
   box-sizing: border-box; 
 }
 
 /* 6. 편지지 3종 순환 */
-/* (경로: src/pages/css/ -> src/pages/ -> src/ -> src/images/) */
 .letter-card-0 {
   background-image: url('../../images/Letter_paper1.svg');
 }
@@ -112,10 +103,19 @@ body {
 
 /* 7. 편지지 안의 텍스트 */
 .worry-text {
+  /* 폰트 및 크기 */
+  font-family: 'IsYun', serif;
   font-size: 16px;
-  color: #4b4b4b; 
+  color: #FFFFFF; 
   font-weight: 500;
+  
+  /* ★ 위쪽 여백으로 세로 위치 조절 */
+  margin-top: 60px; 
+  
+  /* (기존 스타일) */
   text-align: center;
-  margin: 0; 
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
   line-height: 1.5; 
 }
