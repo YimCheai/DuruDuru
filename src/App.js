@@ -3,7 +3,7 @@ import IntroPage from './pages/IntroPage';
 import StartPage from './pages/StartPage';
 import SignupPage from './pages/SignupPage';
 import Loginpage from './pages/LoginPage';
-import WritePage from './pages/WritePage';
+import WritePage from './pages/letterinto';
 import MainPage from './pages/MainPage';
 import ProfilePage from './pages/ProfilePage';
 
