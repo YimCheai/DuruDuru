@@ -3,7 +3,7 @@ import bg from '../images/background2.svg';
 import vote from '../images/vote.png';
 import vote2 from '../images/vote2.png';
 import voteIcon from '../images/vote_icon.svg';
-import chatIcon from '../images/chat_icon.svg'; // 추가
+import chatIcon from '../images/chat_icon.svg';
 import '../index.css';
 import BottomBar from '../component/BottomBar.jsx';
 
@@ -136,7 +136,7 @@ export default function WritePage() {
           </div>
         </div>
 
-        {/* 하단 흰색 사각형 */}
+        {/* 하단 흰색 사각형 (입력 가능) */}
         <div
           style={{
             position: 'absolute',
@@ -150,20 +150,24 @@ export default function WritePage() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            padding: '0 18.5px', // 오른쪽 아이콘 간격
+            padding: '0 18.5px',
             boxSizing: 'border-box',
           }}
         >
-          <span
+          <input
+            type="text"
+            placeholder="당신의 따뜻한 조언이 듣고 싶어요"
             style={{
               fontFamily: 'IsYun',
               fontSize: '14px',
               color: '#707070',
-              marginLeft: '5px',
+              border: 'none',
+              outline: 'none',
+              width: '100%',
+              marginLeft: '17px',
+              background: 'transparent',
             }}
-          >
-            당신의 따뜻한 조언이 듣고 싶어요
-          </span>
+          />
           <img
             src={chatIcon}
             alt="chat icon"
