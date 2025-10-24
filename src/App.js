@@ -5,6 +5,7 @@ import SignupPage from './pages/SignupPage';
 import Loginpage from './pages/LoginPage';
 import WritePage from './pages/WritePage';
 import MainPage from './pages/MainPage';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<Loginpage />} />
         <Route path="/write" element={<WritePage />} /> {/* WritePage 경로 추가 */}
-        <Route path="/MainPage" element={<MainPage />} /> 
+        <Route path="/main" element={<MainPage />} /> 
+        <Route path="/profile" element={<ProfilePage />} /> 
       </Routes>
     </Router>
   );
