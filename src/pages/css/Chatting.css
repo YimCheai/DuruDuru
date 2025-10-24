@@ -1,0 +1,117 @@
+/* 기본 스타일 초기화 */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+}
+
+/* 1. 메인 컨테이너 (flex 레이아웃 사용) */
+.container {
+    background-color: #faf8f3; 
+    background-size: cover;
+    height: 100vh; 
+    position: relative; 
+    
+    /* 🚨 레이아웃 변경: 헤더, 채팅창, 하단바를 세로로 배치 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. 헤더 (🚨 position: absolute 제거 -> flex 아이템으로 변경) */
+.header {
+    width: 100%;
+    
+    /* 👇 60px에서 140px로 수정 (padding-top) */
+    padding: 140px 20px 20px 20px; 
+    
+    box-sizing: border-box; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; /* 제목을 중앙에 */
+    position: relative; 
+    flex-shrink: 0; 
+}
+
+/* 2-1. 뒤로가기 아이콘 (🚨 top 위치 수정) */
+.back-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 20px;
+    
+    /* 👇 60px에서 140px로 수정 (top) */
+    top: 140px; 
+    
+    cursor: pointer;
+}
+
+/* 2-2. 제목 + 편지 아이콘 그룹 */
+.title-group {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.title {
+    font-family: 'IsYun', serif; 
+    font-size: 30px; /* 이미지에 맞게 크기 조절 */
+    font-weight: 600; 
+    margin: 0;
+    color: #5A6CAA;
+}
+
+.title-icon {
+    width: 24px; 
+    height: 24px;
+}
+
+/* 3. (신규) "채팅 영역" 스타일 */
+.chat-area {
+    /* 🚨 이게 핵심: 남은 세로 공간을 모두 차지 */
+    flex-grow: 1; 
+    
+    /* 🚨 이 영역 안에서만 스크롤 */
+    overflow-y: auto; 
+    
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* 말풍선 사이 간격 */
+    padding: 20px;
+    
+    /* 🚨 BottomBar가 가리지 않도록 하단 여백 추가 */
+    padding-bottom: 100px; 
+}
+
+/* 4. (신규) 말풍선 공통 스타일 */
+.chat-bubble-question,
+.chat-bubble-reply {
+    max-width: 80%; /* 말풍선 최대 너비 */
+    padding: 12px 18px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.chat-bubble-question p,
+.chat-bubble-reply p {
+    margin: 0;
+    font-size: 15px; /* 이미지와 비슷하게 폰트 크기 조절 */
+    line-height: 1.6;
+}
+
+/* 5. (신규) 질문 말풍선 (흰색, 오른쪽 정렬) */
+.chat-bubble-question {
+    background-color: #ffffff;
+    color: #333;
+    align-self: flex-end; /* 오른쪽으로 정렬 */
+    border-bottom-right-radius: 4px; /* 뾰족한 꼬리 모양 */
+}
+
+/* 6. (신규) 조언 말풍선 (파란색, 왼쪽 정렬) */
+.chat-bubble-reply {
+    background-color: #6A79B9; /* 이미지의 파란색 */
+    color: #ffffff;
+    align-self: flex-start; /* 왼쪽으로 정렬 */
+    border-bottom-left-radius: 4px; /* 뾰족한 꼬리 모양 */
+}

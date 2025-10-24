@@ -5,16 +5,17 @@ import plusIcon from "../images/plus_icon.svg";
 import plusIconClick from "../images/plus_icon_click.svg";
 import profileIcon from "../images/profile_icon.svg";
 import profileIconClick from "../images/profile_icon_click.svg";
+import checkIcon from "../images/check.svg"; // Import the check icon
 import "./css/BottomBar.css";
 
-export default function BottomBar() {
+export default function BottomBar({ showCheckIcon, onCheckClick }) {
     const navigate = useNavigate();
     const location = useLocation(); // 현재 경로 확인
 
     // 현재 경로에 따라 활성화 아이콘 결정
     const getActiveIcon = () => {
         if (location.pathname === "/main") return "home";
-        else if (location.pathname === "/write") return "plus";
+        else if (location.pathname === "/letterwrite") return "plus";
         else if (location.pathname === "/profile") return "profile";
         else return ""; // 다른 경로에서는 없음
     };
@@ -22,7 +23,7 @@ export default function BottomBar() {
     const handleClick = (icon) => {
         if (icon === "home") navigate("/main");
         else if (icon === "profile") navigate("/profile");
-        else if (icon === "plus") navigate("/write");
+        else if (icon === "plus") navigate("/letterwrite");
     };
 
     const active = getActiveIcon();
@@ -42,14 +43,14 @@ export default function BottomBar() {
             </div>
 
             <div
-                onClick={() => handleClick("plus")}
+                onClick={showCheckIcon ? onCheckClick : () => handleClick("plus")}
                 className="plus"
                 role="button"
                 tabIndex={0}
             >
                 <img
-                    src={active === "plus" ? plusIconClick : plusIcon}
-                    alt="Plus"
+                    src={showCheckIcon ? checkIcon : (active === "plus" ? plusIconClick : plusIcon)}
+                    alt={showCheckIcon ? "Check" : "Plus"}
                 />
             </div>
 

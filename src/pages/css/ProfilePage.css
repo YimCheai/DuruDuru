@@ -1,0 +1,120 @@
+/* 기본 스타일 초기화 */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+}
+
+/* 1. 메인 컨테이너 */
+.container {
+    background-color: #faf8f3; 
+    /* 이미지의 질감 배경 대신 임시로 단색 배경을 사용합니다. */
+    /* background-image: url('...'); */
+    background-size: cover;
+    height: 100vh; 
+    position: relative; 
+    /* 자식 요소들이 스크롤 되도록 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. 헤더 */
+.header {
+  /* 화면 상단에 고정 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; /* 스크롤 영역보다 위에 있도록 설정 */
+  
+  /* Y위치 (세로) */
+  padding: 140px 0 0 0; 
+  
+  /* 자식요소(제목+아이콘) 정렬 */
+  display: flex;
+  align-items: center; 
+  justify-content: center; /* 가로 중앙 정렬 */
+  gap: 8px; /* 글자와 아이콘 사이 간격 */
+}
+
+/* 2-1. 뒤로가기 아이콘 */
+.back-icon {
+    width: 24px;
+    height: 24px;
+    /* 헤더의 왼쪽 끝에 배치 */
+    position: absolute;
+    left: 20px;
+    top: 140px; /* 헤더의 패딩과 맞춤 */
+    cursor: pointer;
+}
+
+/* 2-2. 제목 + 편지 아이콘 그룹 */
+.title-group {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* 글자와 아이콘 사이 간격 */
+}
+
+.title {
+  font-family: 'IsYun', serif; /* index.css에 등록한 폰트 */
+  font-size: 32px;
+  font-weight: 600; /* Regular */
+  margin: 0;
+  color: #5A6CAA;
+}
+
+.title-icon {
+    width: 24px; 
+    height: 24px;
+}
+
+/* 3. 고민 목록 (스크롤 영역) */
+.worry-list {
+    /* position: absolute 대신 flex-grow로 남은 공간을 모두 차지 */
+    flex-grow: 1; 
+    overflow-y: auto; /* 이 영역 안에서만 스크롤 */
+    
+    /* 카드 정렬 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 16px; 
+    padding: 20px;
+    
+    /* BottomBar가 가리지 않도록 하단 여백 추가 */
+    padding-bottom: 100px; 
+}
+
+/* 4. 새 디자인: 고민 카드 */
+.worry-card {
+    width: 90%;
+    max-width: 400px; /* 최대 너비 제한 */
+    background-color: #ffffff;
+    border-radius: 20px; /* 둥근 모서리 */
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* 은은한 그림자 */
+    
+    /* 내부 요소 (제목, 조언 개수) 정렬 */
+    display: flex;
+    justify-content: space-between; /* 양쪽 끝으로 */
+    align-items: center;
+}
+
+/* 5. 고민 카드 - 제목 */
+.worry-title {
+    font-size: 18px; 
+    
+    /* 👇 폰트: 'IsYun' 폰트를 사용하거나 원하는 다른 폰트 이름으로 변경 */
+    font-family: 'IsYun', serif; 
+    
+    font-weight: 400;
+    color: #333;
+}
+
+/* 6. 고민 카드 - 조언 개수 */
+.advice-count {
+    font-size: 14px;
+    color: #888;
+}

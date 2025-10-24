@@ -8,13 +8,16 @@ import { doc, setDoc } from "firebase/firestore";
 import './css/StartPage.css';
 
 function StartPage() {
+  const navigate = useNavigate();
 
   async function handleGoogleLogin() {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
 
+      // console.log("Firebase User UID:", user.uid); // Removed for debugging
       console.log("로그인 성공:", user.displayName, user.email);
+      localStorage.setItem('currentUserId', user.uid); // Store user ID in localStorage
 
       // Firestore에 저장
       const userRef = doc(db, "users", user.uid);
@@ -26,7 +29,7 @@ function StartPage() {
       }, { merge: true });
 
       alert(`환영합니다, ${user.displayName}님!`);
-      navigate("/MainPage");
+      navigate("/main"); // Navigate to /main
       // 예: window.location.href = "/main";
     } catch (error) {
       console.error("로그인 실패:", error);
