@@ -1,3 +1,4 @@
+
  .Elements {
     display: flex;       
     flex-direction: column;
@@ -6,7 +7,11 @@
     height: 100vh;
     gap: 20px;
     padding: 20px;
+<<<<<<< HEAD:src/pages/StartPage.css
     background-image: url('../images/background.svg');
+=======
+    background-image: url('../../images/background.svg');
+>>>>>>> friend/main:src/pages/css/StartPage.css
     background-size: cover;
     background-position: center;
     

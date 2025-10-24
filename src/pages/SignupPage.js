@@ -1,4 +1,4 @@
-import './StartPage.css';
+import './css/SignupPage.css';
 import React from 'react';
 import logo from "../images/logoImage.svg";
 import userIcon from "../images/userIcon.svg";
