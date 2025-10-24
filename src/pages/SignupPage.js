@@ -3,7 +3,7 @@ import React from 'react';
 import logo from "../images/logoImage.svg";
 import userIcon from "../images/userIcon.svg";
 import pwIcon from "../images/pwIcon.svg";
-import './SignupPage.css';
+import arrowIcon from "../images/lowArrow.svg";
 
 function SignupPage() {
     return (
@@ -36,7 +36,7 @@ function SignupPage() {
                 <input type="firstEmail" placeholder="이메일 주소" />
               </div>
               @
-              <div className="input-wrapper1">
+              <div className="input-wrapper2">
                 <input type="firstEmail" placeholder="gmail.com" />
                 <select>
                   <option value={"gmail.com"}>gmail.com</option>

@@ -1,5 +1,7 @@
 import React from 'react';
 import logo from "../images/logoImage.svg";
+import userIcon from "../images/userIcon.svg";
+import pwIcon from "../images/pwIcon.svg";
 import './css/LoginPage.css';
 
 function LoginPage() {
@@ -29,9 +31,6 @@ function LoginPage() {
             <button className="logIn-button1">로그인</button>
       </div>
 
-      <div className='buttonBox'>
-        <button className="logIn-button">로그인</button>
-      </div>
     </div>
   );
 }

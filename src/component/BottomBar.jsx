@@ -1,36 +1,69 @@
-import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import homeIcon from "../images/home_icon.svg";
 import homeIconClick from "../images/home_icon_click.svg";
 import plusIcon from "../images/plus_icon.svg";
+import plusIconClick from "../images/plus_icon_click.svg";
 import profileIcon from "../images/profile_icon.svg";
 import profileIconClick from "../images/profile_icon_click.svg";
+import "./css/BottomBar.css";
 
 export default function BottomBar() {
-  const [active, setActive] = useState("home"); // 기본 활성화 아이콘: home
+    const navigate = useNavigate();
+    const location = useLocation(); // 현재 경로 확인
 
-  return (
-    <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-sm">
-      <div className="flex justify-around items-center h-14">
-        <button onClick={() => setActive("home")} className="home">
-          <img
-            src={active === "home" ? homeIconClick : homeIcon}
-            alt="Home"
-            className="w-6 h-6"
-          />
-        </button>
+    // 현재 경로에 따라 활성화 아이콘 결정
+    const getActiveIcon = () => {
+        if (location.pathname === "/main") return "home";
+        else if (location.pathname === "/write") return "plus";
+        else if (location.pathname === "/profile") return "profile";
+        else return ""; // 다른 경로에서는 없음
+    };
 
-        <button onClick={() => setActive("plus")} className="plus">
-          <img src={plusIcon} alt="Plus" className="w-6 h-6" />
-        </button>
+    const handleClick = (icon) => {
+        if (icon === "home") navigate("/main");
+        else if (icon === "profile") navigate("/profile");
+        else if (icon === "plus") navigate("/write");
+    };
 
-        <button onClick={() => setActive("profile")} className="profile">
-          <img
-            src={active === "profile" ? profileIconClick : profileIcon}
-            alt="Profile"
-            className="w-6 h-6"
-          />
-        </button>
-      </div>
-    </div>
-  );
+    const active = getActiveIcon();
+
+    return (
+        <div className="bottomBar">
+            <div
+                onClick={() => handleClick("home")}
+                className="home"
+                role="button"
+                tabIndex={0}
+            >
+                <img
+                    src={active === "home" ? homeIconClick : homeIcon}
+                    alt="Home"
+                />
+            </div>
+
+            <div
+                onClick={() => handleClick("plus")}
+                className="plus"
+                role="button"
+                tabIndex={0}
+            >
+                <img
+                    src={active === "plus" ? plusIconClick : plusIcon}
+                    alt="Plus"
+                />
+            </div>
+
+            <div
+                onClick={() => handleClick("profile")}
+                className="profile"
+                role="button"
+                tabIndex={0}
+            >
+                <img
+                    src={active === "profile" ? profileIconClick : profileIcon}
+                    alt="Profile"
+                />
+            </div>
+        </div>
+    );
 }

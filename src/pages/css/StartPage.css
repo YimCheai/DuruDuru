@@ -7,11 +7,7 @@
     height: 100vh;
     gap: 20px;
     padding: 20px;
-<<<<<<< HEAD:src/pages/StartPage.css
-    background-image: url('../images/background.svg');
-=======
     background-image: url('../../images/background.svg');
->>>>>>> friend/main:src/pages/css/StartPage.css
     background-size: cover;
     background-position: center;
     
@@ -30,7 +26,7 @@
 }
 
 .welcome-text {
-  font-size: 16px;
+  font-size: 21px;
   color: #333;
   font-family: 'IsYun';
 }

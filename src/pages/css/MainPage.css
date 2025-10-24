@@ -1,0 +1,50 @@
+/* ... (container, title 등 상단 스타일은 동일) ... */
+
+/* 4. 고민 편지 목록 */
+.worry-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 16px; 
+  padding: 0 20px;
+}
+
+/* 5. 편지 카드 (제일 중요한 부분) */
+.letter-card {
+  /* ★★★ 여기에 편지지 이미지를 배경으로 넣어주세요 ★★★
+    SVG 파일 경로를 정확하게 입력해야 합니다.
+  */
+  background-image: url('../../images/Letter_paper1.svg');
+  
+  background-color: #e0e3f0; /* 이미지가 없을 경우 임시 색상 */
+  background-size: 100% 100%; 
+  background-repeat: no-repeat;
+  
+  width: 100%; 
+  max-width: 380px; 
+  height: 180px; 
+  
+  /* 텍스트 배치를 위해 flex 사용 */
+  display: flex;
+  flex-direction: column;
+  
+  /* 텍스트를 (세로) 중앙에 오도록 수정 */
+  justify-content: center; 
+  align-items: center; /* (가로) 중앙 정렬 */
+  
+  /* 텍스트 위치를 잡기 위한 내부 여백 */
+  padding: 30px; 
+  box-sizing: border-box; 
+}
+
+.worry-text {
+  font-size: 16px;
+  color: #4b4b4b; 
+  font-weight: 500;
+  text-align: center;
+  margin: 0; 
+  line-height: 1.5; 
+  /* margin-top 삭제 (justify-content로 중앙 정렬) */
+}
+
+/* .to-you 스타일 삭제됨 */

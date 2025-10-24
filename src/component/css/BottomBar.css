@@ -1,0 +1,24 @@
+.bottomBar {
+    position: fixed;
+    bottom: 57px;            /* 화면 맨 아래 고정 */
+    left: 1px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* 아이콘들이 아래쪽 기준으로 정렬되도록 */
+    gap: 60px;
+    background: transparent; /* 배경 없음 */
+    z-index: 10;
+}
+
+/* 플러스는 중앙 기준, 홈/프로필은 살짝 아래 */
+.home, .profile, .plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 홈과 프로필만 살짝 아래로 */
+.home, .profile {
+    margin-bottom: -10px; /* 원하는 만큼 조절 (예: 10~20px) */
+}
