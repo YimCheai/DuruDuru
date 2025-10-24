@@ -8,56 +8,53 @@
     padding: 20px;
   }
 
-  .Elements {
-  display: flex;       
+.titleBox{
+  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-  gap: 20px;
-  padding: 20px;
-  background-color: #f5f5f5; /* 배경색 추가해서 CSS 적용 확인 */
+  justify-content: center;
+  padding-bottom: 75%;
 }
-
 .logo {
   width: 150px;
   height: auto;
 }
 
 .welcome-text {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
   color: #333;
 }
 
-.input-container {
+.buttonBox{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
   gap: 10px;
-  width: 100%;
-  max-width: 400px;
-}
 
-.input-container input {
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
 }
-
-.signup-button,
+.logIn-button,
 .google-button {
   width: 100%;
   max-width: 400px;
   padding: 12px;
   border: none;
-  border-radius: 4px;
+  border-radius: 35px;
   font-size: 16px;
   cursor: pointer;
 }
-
-.signup-button {
-  background-color: #4285f4;
+.google-button{
+  gap: 3%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.google-button:hover{
+  border: solid 1px black;
+}
+.logIn-button {
+  background-color: #5B6CAA;
   color: white;
 }
 
@@ -65,4 +62,8 @@
   background-color: white;
   border: 1px solid #ddd;
   color: #333;
+}
+html, body, #root {
+  height: 100%;
+  margin: 0;
 }
